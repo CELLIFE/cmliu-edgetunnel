@@ -1,5 +1,5 @@
 # wrangler.toml
-name = 'purple-smoke-9dd7'
+name = 'srv-6iwfsv712'
 main = "_worker.js"
 compatibility_date = "2025-11-04"
 keep_vars = true
