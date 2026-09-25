@@ -15,6 +15,6 @@ invocation_logs = true
 [observability.traces]
 enabled = false
 
-#[[kv_namespaces]]
-#binding = "KV"			#KV绑定名默认不可修改
-#id = "kv"				#KV数据库id
+[[kv_namespaces]]
+binding = "KV"			#KV绑定名默认不可修改
+id = "c242b3aa50f14780b00ca7df82abb6c2"				#KV数据库id
