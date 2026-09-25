@@ -73,7 +73,7 @@ jobs:
             stringArrayWrappersParametersMaxCount: 3,
             renameGlobals: false,
             identifierNamesGenerator: 'mangled-shuffled',
-            ignoreImports: true,
+            ignoreRequireImports: true,
             target: 'browser-no-eval',
             numbersToExpressions: false,
             simplify: false,
@@ -117,3 +117,18 @@ jobs:
             git commit -m "sync & obfuscate: update from cmliu/edgetunnel@main"
             git push origin main
           fi
+
+      # ================= 仅新增此步骤 =================
+      - name: Publish to fixed-tag Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: worker
+          name: EdgeTunnel Worker (auto-updated)
+          files: _worker.js
+          make_latest: true
+          body: |
+            自动同步自 cmliu/edgetunnel@main
+            构建时间: ${{ github.run_id }} / ${{ github.sha }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # =================================================
