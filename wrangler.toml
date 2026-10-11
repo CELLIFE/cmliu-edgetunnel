@@ -1,4 +1,4 @@
-name = "cmedt00"
+name = "djgkgcjjcjvkv"
 main = "_worker.js"
 compatibility_date = "2025-11-04"
 keep_vars = true
@@ -16,4 +16,4 @@ enabled = false
 
 [[kv_namespaces]]
 binding = "KV"			#KV绑定名默认不可修改
-id = "c7361f836224443ba241543446be4fa0"				#KV数据库id
+id = ""				#KV数据库id
