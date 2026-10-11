@@ -123,8 +123,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # 保留明文源码与 worker.js，_worker.js 仅存在于临时环境
-          git add "明文源吗" "worker.js"
+          # 仓库保留明文源码与 _worker.js；worker.js 仅在 Release 中
+          git add "明文源吗" "_worker.js"
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes, skipping commit."
